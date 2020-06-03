@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 //        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_main);
-        progressBar = findViewById(R.id.progressBar);
+//        progressBar = findViewById(R.id.progressBar);
         CookieManager.getInstance().setAcceptCookie(true);
         webView = findViewById(R.id.webView);
         if (!isConnectingToInternet(MainActivity.this)){
@@ -44,16 +44,15 @@ public class MainActivity extends AppCompatActivity {
         WebSettings webSettings = webView.getSettings();
         webSettings.setJavaScriptEnabled(true);
         webSettings.setDomStorageEnabled(true);
-        webSettings.setLoadWithOverviewMode(true);
-        webSettings.setUseWideViewPort(true);
-        webView.setWebViewClient(new WebViewClient() {
-            public void onPageFinished(WebView view, String url) {
-                progressBar.setVisibility(View.GONE);
-            }
-        });
-        String url = "https://maskedstories.com";
+//        webView.setWebViewClient(new WebViewClient() {
+//            public void onPageFinished(WebView view, String url) {
+//                progressBar.setVisibility(View.GONE);
+//            }
+//        });
+        String url = "https://www.maskedstories.com";
         webView.loadUrl(url);
     }
+
 
     private class WebViewClient extends android.webkit.WebViewClient {
         @Override

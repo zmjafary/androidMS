@@ -5,14 +5,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Splash"
-    android:gravity="center"
-    android:background="@android:color/white">
+    android:gravity="center">
 
-    <ImageView
+
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:src="@drawable/logo">
+        android:layout_height="match_parent"
+        style="@style/diagonalStyle"
+        android:gravity="center">
 
-    </ImageView>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/logo">
+        </ImageView>
+
+    </RelativeLayout>
 
 </LinearLayout>
